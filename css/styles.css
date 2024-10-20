@@ -1,0 +1,154 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+nav {
+    background-color: #333;
+    padding: 1em;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+main {
+    padding: 2em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.book-details{
+    border: 1px solid #ccc; /* Optional: Add border for card effect */
+    border-radius: 5px; /* Rounded corners */
+    padding: 16px; /* Padding inside the card */
+    margin: 16px; /* Space between cards */
+    text-align: center; /* Center text alignment */
+    width: 200px; /* Set a fixed width for all cards */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    background-color: #fff; /* Background color */
+}
+#book-list {
+    display: flex; /* Use Flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: space-around; /* Space out the items */
+}
+.book-item {
+    border: 1px solid #ccc; /* Optional: Add border for card effect */
+    border-radius: 5px; /* Rounded corners */
+    padding: 16px; /* Padding inside the card */
+    margin: 16px; /* Space between cards */
+    text-align: center; /* Center text alignment */
+    width: 200px; /* Set a fixed width for all cards */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    background-color: #fff; /* Background color */
+}
+
+/* Set image dimensions */
+.book-cover {
+    width: 100%; /* Make image full width of the card */
+    height: 300px; /* Fixed height for all images */
+    object-fit: cover; /* Crop image to fit without distortion */
+}
+
+/* Styles for text */
+.book-title {
+    font-size: 16px; /* Set font size */
+    margin: 10px 0; /* Margin around title */
+}
+
+.book-author,
+.book-genre {
+    font-size: 14px; /* Set font size for author and genre */
+    margin: 5px 0; /* Margin for spacing */
+}
+
+/* Styles for button */
+.wishlist-button {
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 18px; /* Font size for button */
+    margin-top: 8px; /* Margin for spacing */
+}
+
+.view-details {
+    text-decoration: none; /* No underline for the link */
+    color: blue; /* Link color */
+    margin-top: 8px; /* Margin for spacing */
+    display: inline-block; /* Allow margin */
+}
+
+.view-details:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .book-item {
+        width: calc(50% - 20px); /* Two cards per row on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .book-item {
+        width: calc(100% - 20px); /* One card per row on very small screens */
+    }
+}
+
+
+#pagination {
+    margin-top: 2em;
+    text-align: center;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+input, select {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    width: 100%;
+    max-width: 300px;
+}
+/* Loader Animation */
+.loader {
+    border: 8px solid #f3f3f3; /* Light gray */
+    border-top: 8px solid #333; /* Darker color for animation */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+/* Animation Keyframes */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
