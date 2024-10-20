@@ -2,8 +2,7 @@
 
 A responsive book listing application built with vanilla JavaScript, HTML, and CSS. The app fetches data from the [Gutendex API](https://gutendex.com/) to display a list of books, allowing users to search, filter by genre, add books to a wishlist, and paginate through the book list.
 
-#Live Site Link 
-https://brilliant-frangipane-a24de0.netlify.app/
+[Live Site Link]https://brilliant-frangipane-a24de0.netlify.app/
 
 ## Features
 
